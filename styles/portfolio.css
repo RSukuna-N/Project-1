@@ -4,6 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+.demo-badge {
+    background-color: #FFF3CD; /* Light warning yellow */
+    color: #856404;           /* Dark gold text for contrast */
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #FFEEBA;
+    width: 100%;
+}
 
 .font-open-sans {
   font-family: "Open Sans", sans-serif;
