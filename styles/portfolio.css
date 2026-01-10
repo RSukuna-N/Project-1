@@ -1,3 +1,4 @@
+/* Shared style */
 * {
   margin: 0;
   padding: 0;
@@ -27,6 +28,27 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.section-heading{ 
+    max-width: 827px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.section-heading h2{
+    font-size: 35px;
+    margin-bottom: 30px; /* Moves the paragraph away by adding space OUTSIDE the header. */
+    /* padding-bottom: 30px; Padding adds space INSIDE the header box,which We dont want, */
+}
+
+.section-heading p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 30px; /* vertical gap between lines of text */
+    color: #757575;
+}
+
+/* main style */
 
 header {
   background-color: #fff8f3;
@@ -125,4 +147,65 @@ nav .menu a {
   /* display: block removes a tiny 'ghost gap' that usually sits under images. */
   display: block; 
   margin-bottom: 0;
+}
+
+#about{
+    padding-top: 130px; /* whole about section's Gap from banner */
+}
+
+#about .about-container{
+    width:70% ; 
+    max-width: 1140px;
+    margin: 0 auto; /* top bottom no space, left right default spacing */
+    text-align: center; 
+    background-color: #fff8f3;
+    padding: 131px 156px; /* gap between inside section and text */
+
+}
+#about .about-container .about-info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-info .info-card p{
+    font-size: 20px;
+    line-height: 30px; /* vertical gap between lines of text */
+    color: #757575;
+}
+.about-info .info-card h4{
+    font-size: 15px;
+}
+
+#skills{
+    padding-top: 130px;
+}
+
+#skills .skills-container{
+    width: 70%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+#skills .skills-container .skill-box{
+    display: flex;
+    gap: 24px; /*gap  between card */
+}
+.skill-box .skill-card{
+    padding: 30px; /* Space inside the card*/
+    max-width: 267px;
+    box-shadow: 0 6px 50px 0 #00000027;
+}
+.skill-card img{
+    max-width: 44px;
+    margin-bottom: 30px; /* Gap under the icon */
+}
+.skill-card h3{
+    font-size: 20px;
+    color:#181818 ;
+    margin-bottom: 20px; /* Gap under the text */
+}
+.skill-card p{
+     font-size: 16px;
+  color: #757575;
+  line-height: 28px;
+  
 }
