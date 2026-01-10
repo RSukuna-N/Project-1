@@ -1,104 +1,128 @@
-/* Reset default margin and padding,and set box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* shared style */
 .font-open-sans {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
 }
 
-.logo h2{
-    font-size: 45px;
-    font-weight: 900;
-}
-.color-orange{
-    color: #fd6e0a;
+.logo h2 {
+  font-size: 45px;
+  font-weight: 900;
 }
 
-.btn{
-    color: #ffffff;
-    background-color: #FD6E0A;
-    border: none;
-    padding: 18px 35px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-
+.color-orange {
+  color: #fd6e0a;
 }
 
-/* main style */
+.btn {
+  color: #ffffff;
+  background-color: #FD6E0A;
+  border: none;
+  padding: 18px 35px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 header {
   background-color: #fff8f3;
-  background: url("../images/developer.png"), url("../images/header_bg.png"), #fff8f3;
+  background-image: url("../images/developer.png"), url("../images/header_bg.png");
   background-position: left center, bottom right;
   background-repeat: no-repeat;
+  
+  /* 101px 766px is the EXACT size of your 'developer' image so it doesn't stretch. 
+     'auto' lets the circle background size itself naturally. */
+  background-size: 101px 766px, auto; 
+  
   padding-top: 50px;
+  width: 100%;
+  min-height: 800px;
+  
+  /* Flex makes the header a 'parent' container. 
+     Column stacks the Nav on top of the Banner. */
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
-  width: 71%; /* Width relative to screen size */
-  max-width: 1140px; /* Maximum width for large screens */
-  /* border: 1px solid red; */
-  margin: 0px auto;
-  display: flex; /* stack side by side */
-  justify-content: space-between; /* creating space between them */
+  /* 230px creates a 'gap' on the left so we don't cover the developer text. */
+  margin-left: 230px; 
+  margin-right: 100px;
+  
+  /* Flex here puts the Logo on the left and Menu on the right. */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav .menu{
-    display: flex;
-    list-style: none;
-    gap: 51px;
-    align-items: center;
+nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 51px;
+  align-items: center;
 }
 
-nav .menu a{
-    font-size: 20px;
-    color: #474747;
-    text-decoration: none;
+nav .menu a {
+  font-size: 20px;
+  color: #474747;
+  text-decoration: none;
 }
 
-#banner{
-    /* border: 1px solid red; */
-    margin: 47px 38px 0px 230px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-#banner .banner-content{
-    max-width: 585px;
-}
-
-#banner .banner-content h2{
-    font-size: 45px;
-    font-weight:600 ;
-    color: #474747;
-    margin-bottom: 5px;
+#banner {
+  /* Margin-left 230px matches the Nav so your text lines up perfectly. */
+  margin-left: 230px; 
+  margin-right: 100px;
+  margin-top: 47px;
+  
+  /* flex: 1 tells the banner to grow and take up all empty space in the header. */
+  flex: 1; 
+  display: flex;
+  justify-content: space-between;
+  
+  /* align-items: flex-end forces the text and image to sit on the very bottom. */
+  align-items: flex-end; 
 }
 
-#banner .banner-content h1{
-    font-size:85px ;
-    font-weight: bold;
-    color: #181818;
-    margin-bottom: 20px;
+.banner-content {
+  max-width: 585px;
+  /* Space at the bottom keeps the text from touching the bottom edge. */
+  padding-bottom: 50px; 
 }
 
-#banner .banner-content p{
-    font-size: 18px;
-    color: #757575;
-    line-height: 30px;
-    margin-bottom: 30px;
+.banner-content h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #474747;
+  margin-bottom: 5px;
 }
 
- #banner .banner-image img{
-    max-width:585px ; 
-    vertical-align: middle;
-    height: 600px;
-    width: auto;
-}  
+.banner-content h1 {
+  font-size: 85px;
+  font-weight: bold;
+  color: #181818;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  color: #757575;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.banner-image {
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner-image img {
+  width: 500px;
+  height: auto;
+  /* display: block removes a tiny 'ghost gap' that usually sits under images. */
+  display: block; 
+  margin-bottom: 0;
+}
