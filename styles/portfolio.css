@@ -6,7 +6,7 @@
 }
 .demo-badge {
     background-color: #FFF3CD; /* Light warning yellow */
-    color: #856404;           /* Dark gold text for contrast */
+   color: #474747;
     text-align: center;
     padding: 12px 0;
     font-size: 14px;
@@ -317,4 +317,20 @@ footer .footer-container{
     border: none;
     border-radius: 5px;
     color: #757575;
+}
+.footer-bottom {
+    background-color: #FFF3CD; /* Light warning yellow */
+    color: #856404;           /* Dark gold text for contrast */
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #FFEEBA;
+    width: 100%;
+     margin-top:30px; 
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    color: #757575; 
 }
