@@ -57,28 +57,41 @@
     line-height: 30px; /* vertical gap between lines of text */
     color: #757575;
 }
+.text-center{
+    text-align: center;
+}
 
 /* main style */
 
 header {
   background-color: #fff8f3;
   background-image: url("../images/developer.png"), url("../images/header_bg.png");
-  background-position: left center, bottom right;
+  background-position: 40px center, bottom right;
   background-repeat: no-repeat;
+  background-size: auto, auto; /* Prevents stretching */
   
-  /* 101px 766px is the EXACT size of your 'developer' image so it doesn't stretch. 
-     'auto' lets the circle background size itself naturally. */
+  min-height: 800px;           /* Gives the background space to show up */
+  padding-top: 50px;           /* Keeps your Nav away from the top edge */
+  display: flex;               /* Organizes  Name and Text */
+  flex-direction: column;
+}
+
+/*header {
+  background-color: #fff8f3;
+  background-image: url("../images/developer.png"), url("../images/header_bg.png");
+  background-position: 23px 38px, bottom right;
+  background-repeat: no-repeat;
+   101px 766px is the EXACT size of your 'developer' image so it doesn't stretch. 
+     'auto' lets the circle background size itself naturally. 
   background-size: 101px 766px, auto; 
-  
   padding-top: 50px;
   width: 100%;
   min-height: 800px;
-  
   /* Flex makes the header a 'parent' container. 
-     Column stacks the Nav on top of the Banner. */
+     Column stacks the Nav on top of the Banner. 
   display: flex;
   flex-direction: column;
-}
+}*/
 
 nav {
   /* 230px creates a 'gap' on the left so we don't cover the developer text. */
@@ -265,5 +278,43 @@ nav .menu a {
 .resume-card .card-text{
     font-size: 15px;
     line-height: 28px;
+    color: #757575;
+}
+footer{
+    margin-top: 130px;
+    background-color: #fff8f3;
+    padding: 130px 0;
+}
+footer .footer-container{
+    width: 71%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    gap: 116px;
+}
+.footer-container h2{
+    font-size: 35px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+.footer-container ,social{
+    max-width: 562px;
+}
+
+.footer-container .social p {
+    color: #474747;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.footer-container .icons a{
+    margin-right: 24px;
+}
+.footer-container .form input[type="text"],.footer-container .form textarea{
+    width: 461px;
+    padding: 18px 31px;
+    margin-bottom: 24px;
+    border: none;
+    border-radius: 5px;
     color: #757575;
 }
